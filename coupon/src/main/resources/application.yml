@@ -1,0 +1,19 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: coupon
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.186.131:8848
+  rabbitmq:
+    host: 192.168.186.131
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
+    listener:
+      direct:
+        acknowledge-mode: manual #开启手动ack
